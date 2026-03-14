@@ -1,4 +1,6 @@
 import streamlit as st
+from subset_construction import convert_to_dfa
+from visualization import nfa, dfa
 st.title("NFA To DFA Convertor Using Subset Construction Method")
 #Input NFA details
 states_input = st.text_input("Enter states (example: q0, q1, A, B): ")
@@ -31,7 +33,7 @@ if st.button("Convert"):
         st.write(key[0], ",", key[1], "--->", transitions[key])
   #NFA Diagram
   st.subheader("NFA Diagram")
-  st.graphviz_chart(draw_nfa(states, symbols, initial_state, final_states)
+  st.graphviz_chart(nfa(states, symbols, initial_state, final_states))
   st.subheader("Subset Construction Steps")
   for s in steps:
     st.write(s)
@@ -46,6 +48,6 @@ if st.button("Convert"):
     end = dfa_trans[key]
     st.write(start, "--", symbol, "-->", end)
    st.subheader("DFA Diagram")
-   st.graphviz_chart(draw_dfa(dfa_states, dfa_trans))
+   st.graphviz_chart(dfa(dfa_states, dfa_trans))
 
   
