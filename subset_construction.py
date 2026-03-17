@@ -4,7 +4,7 @@ def convert_to_dfa(states, symbols, start_state, transitions):
     initial_set = [initial_state]
     queue = []
     queue.append(initial_set)
-    dfa_states.append(intial_set)
+    dfa_states.append(initial_set)
     steps = []
     while queue:
         current_state = queue.pop(0)
