@@ -1,12 +1,15 @@
 import graphviz as gph
-def nfa(states, transitions):
+def nfa(states, symbols, initial_state, final_states, transitions):
   graph = gph.Diagraph()
   for s in states:
-    graph.node(s)
-  for key in transtions:
+    if s in final_states:
+      graph.node(s, shape="doublecircle")
+    else:
+      graph.node(s)
+  for key in transitions:
     start = key[0]
     symbol = key[1]
-    for end in tansitions[key]:
+    for end in transitions[key]:
       graph.edge(start, end, label = symbol)
   return graph
 def dfa(dfa_states, dfa_trans):
