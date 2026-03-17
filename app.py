@@ -5,8 +5,7 @@ st.title("NFA To DFA Converter Using Subset Construction Method")
 #Input NFA details
 states_input = st.text_input("Enter states (example: q0,q1,A,B): ")
 symbols_input = st.text_input("Enter symbols (for ex: a,b,0,1): ")
-initial_state = st.text_input("Enter initial state: ")
-initial_state = intial_state.strip()
+initial_state = st.text_input("Enter initial state: ").strip()
 final_state = st.text_input("Enter final state: ")
 states = []
 for s in states_input.split(","):
