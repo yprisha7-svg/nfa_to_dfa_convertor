@@ -4,7 +4,7 @@ from visualization import nfa, dfa
 st.title("NFA To DFA Convertor Using Subset Construction Method")
 #Input NFA details
 states_input = st.text_input("Enter states (example: q0, q1, A, B): ")
-symbols_input = st.text_input( Enter symbols (for ex: a, b, 0, 1): ")
+symbols_input = st.text_input("Enter symbols (for ex: a, b, 0, 1): ")
 initial_state = st.text_input("Enter initial state: ")
 final_state = st.text_input("Enter final state: ")
 st.write("Enter transitions like:/n q0,a=q0,q1 ")
