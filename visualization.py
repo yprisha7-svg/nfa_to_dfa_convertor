@@ -1,6 +1,6 @@
 import graphviz as gph
 def nfa(states, symbols, initial_state, final_states, transitions):
-  graph = gph.Diagraph()
+  graph = gph.Digraph()
   for s in states:
     if s in final_states:
       graph.node(s, shape="doublecircle")
