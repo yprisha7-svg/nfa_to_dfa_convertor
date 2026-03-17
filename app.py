@@ -37,7 +37,7 @@ if st.button("Convert"):
   final_states = final_state.split(",")
   transitions = read_transitions(transitions_input)
   dfa_states, dfa_trans, steps = convert_to_dfa(
-        states, symbols, initial_state, transitions
+        states, symbols, initial_state, transitions, final_states
     )
   st.subheader("NFA Details:")
   st.write("States:", states)
