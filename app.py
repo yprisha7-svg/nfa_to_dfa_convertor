@@ -47,7 +47,7 @@ if st.button("Convert"):
     symbol = key[1]
     end = dfa_trans[key]
     st.write(start, "--", symbol, "-->", end)
-   st.subheader("DFA Diagram")
-   st.graphviz_chart(dfa(dfa_states, dfa_trans))
+    st.subheader("DFA Diagram")
+    st.graphviz_chart(dfa(dfa_states, dfa_trans))
 
   
