@@ -58,13 +58,12 @@ if st.button("Convert"):
     st.write(s)
   st.subheader("DFA Transition Table")
   for key in dfa_trans:
-    for key in dfa_trans:
-    start = key[0]
-    symbol = key[1]
-    end = dfa_trans[key]
-    start = start[0]
-    end = end[0]
-    st.write(start, "--", symbol, "-->", end)
+      start = key[0]
+      symbol = key[1]
+      end = dfa_trans[key]
+      start = start[0]
+      end = end[0]
+      st.write(start, "--", symbol, "-->", end)
   st.subheader("DFA Diagram")
   st.graphviz_chart(dfa(dfa_states, dfa_trans))
 
