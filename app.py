@@ -21,7 +21,7 @@ def read_transitions(text):
   return transitions
 if st.button("Convert"):
   states = states_input.split(",")
-  symbols = symbols_text.split(",")
+  symbols = symbols_input.split(",")
   final_states = final_state.split(",")
   transitions = read_transitions(transitions_input)
   st.subheader("NFA Details:")
