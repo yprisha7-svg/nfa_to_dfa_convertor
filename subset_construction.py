@@ -1,4 +1,4 @@
-def convert_to_dfa(states, symbols, start_state, transitions, final_states):
+def convert_to_dfa(states, symbols, initial_state, transitions, final_states):
     dfa_states = []
     dfa_trans = {}
     initial_set = [initial_state]
