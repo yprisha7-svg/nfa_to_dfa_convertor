@@ -8,7 +8,7 @@ def nfa(states, transitions):
     symbol = key[1]
     for end in tansitions[key]:
       graph.edge("start, end, label = symbol)
-  return g
+  return graph
 def dfa(dfa_states, dfa_trans):
     graph = gph.Digraph()
     for s in dfa_states:
